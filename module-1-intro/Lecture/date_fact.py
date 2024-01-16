@@ -17,7 +17,7 @@ def get_number_fact(number: int) -> str:
     """Fetches a fact about the given number from http://numbersapi.com/
 
     Returns a sentence fragment that can end a fact about the date with no verb or closing punctuation."""
-    result = requests.get(f"http://numbersapi.com/{mumber}/math?fragment")
+    result = requests.get(f"http://numbersapi.com/{number}/math?fragment")
     result.raise_for_status()
     return result.text
 
